@@ -4,23 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-// A prime number is a whole number greater than 1 that has only two factors:
-// 1 and the number itself.
+public class myAlgorithm {
 
-public class findPrimeNumbers {
-    public static void main(String[] args) {
+    /* ********************************************************************** */
+    /* *************************** PRIME NUMBERS **************************** */
+    /* ********************************************************************** */
+
+    public void primeNumbers() {
         // Get input from client
         System.out.println("Please input the limit: ");
         Scanner scan = new Scanner(System.in);
         int limit = scan.nextInt();
+        scan.close();
 
         //Start Algo
         List<Integer>   primeNumbers = new ArrayList<>();
         int numberToCheck = 2;
         int count = 0;
-        // int i = 1;
 
-        // for (int numberToCheck = 2; numberToCheck <= limit; numberToCheck++) {
+        System.out.println("\nThe first " + limit + " prime numbers are:");
         while (true) {
             boolean isPrime = true;
             for (int factor = 2; factor <= (numberToCheck / 2); factor++) {
@@ -38,11 +40,5 @@ public class findPrimeNumbers {
             }
             numberToCheck++;
         }
-        // System.out.println("\nThe first " + limit + " prime numbers are:");
-
-        // for (int number : primeNumbers) {
-            // System.out.println("[" + i + "] - " + number);
-        //     i++;
-        // }
     }
 }
