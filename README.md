@@ -1,7 +1,10 @@
 # theoryJava
 
+## 1. Primitive Data Type Variables
 
-## 1. Tricks
+
+
+## 2. Tricks
 
 ### Converting String to int
 
@@ -19,7 +22,7 @@ ArrayList<String> myArr = new ArrayList<>(Arrays.asList("a", "b", "c"));
 
 
 
-## 2. Pure theory
+## 3. Pure theory
 
 ### difference between == and .equals()
 
@@ -72,6 +75,12 @@ for ArrayList : myArr.get(1);
 for Array : myArr.length;
 for ArrayList : myArr.size();
 ```
+
+
+
+## 4. Algorithms
+
+[Prime Numbers]()
 
 
 
