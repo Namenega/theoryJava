@@ -13,9 +13,14 @@ public class findPrimeNumbers {
         System.out.println("Please input the limit: ");
         Scanner scan = new Scanner(System.in);
         int limit = scan.nextInt();
-        List<Integer>   primeNumbers = new ArrayList<>();
 
-        for (int numberToCheck = 2; numberToCheck <= limit; numberToCheck++) {
+        //Start Algo
+        List<Integer>   primeNumbers = new ArrayList<>();
+        int numberToCheck = 2;
+        int count = 0;
+
+        // for (int numberToCheck = 2; numberToCheck <= limit; numberToCheck++) {
+        while (true) {
             boolean isPrime = true;
             for (int factor = 2; factor <= (numberToCheck / 2); factor++) {
                 if ((numberToCheck % factor) == 0) {
@@ -25,9 +30,13 @@ public class findPrimeNumbers {
             }
             if (isPrime) {
                 primeNumbers.add(numberToCheck);
+                count++;
+                if (count >= limit)
+                    break;
             }
+            numberToCheck++;
         }
-        System.out.println("Prime numbers from 1 to " + limit + " are:\n");
+        System.out.println("\nThe first " + limit + " prime numbers are:");
         for (int number : primeNumbers) {
             System.out.println(number);
         }
