@@ -58,14 +58,20 @@ String[] myArr = new String[];
 ArrayList<String> myArrList = new ArrayList<>();
 ```
 
-1. __Arrays__ have static size while __ArrayList__ has dynamic size.
+1. __Arrays__ have static size while __ArrayList__ has dynamic size. It means that we can't add/remove values after declaration in an Array, but in ArrayList yes.
 2. _Data type_ they hold : __Array__ can hold anything (primitive and objects)
 but __ArrayList__ can only hold objects (but we can wrap it "Integer" instead
 of "int").
-3. Both have index starting at 0 but to get an index :
+3. Both have index starting at 0 but to get an index:
 ```
-for __Array__ : myArr[1];
-for __ArrayList__ : myArr.get(1);
+for Array : myArr[1];
+for ArrayList : myArr.get(1);
 ```
+4. Same for the size (Array applies a field while ArrayList applies a method):
+```
+for Array : myArr.length;
+for ArrayList : myArr.size();
+```
+
 
 
