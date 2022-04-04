@@ -12,6 +12,13 @@ String s = "5";
 int i = Integer.parseInt(s);
 ```
 
+### Filling ArrayList at declaration
+
+```
+ArrayList<String> myArr = new ArrayList<>(Arrays.asList("a", "b", "c"));
+```
+
+
 
 ## Pure theory
 
@@ -43,4 +50,21 @@ public boolean equals(TheObject obj_name) {
 ```
 
 ### Array vs ArrayList
+
+Ex:
+```
+import java.util.ArrayList;
+
+String[] myArr = new String[];
+ArrayList<String> myArrList = new ArrayList<>();
+```
+
+1. __Arrays__ have static size while __ArrayList__ has dynamic size.
+2. _Data type_ they hold : __Array__ can hold anything (primitive and objects)
+but __ArrayList__ can only hold objects (but we can wrap it "Integer" instead
+of "int").
+3. Both have index starting at 0 but to get an index :
+for __Array__ : myArr[1];
+for __ArrayList__ : myArr.get(1);
+
 
