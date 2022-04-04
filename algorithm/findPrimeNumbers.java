@@ -37,8 +37,11 @@ public class findPrimeNumbers {
             numberToCheck++;
         }
         System.out.println("\nThe first " + limit + " prime numbers are:");
+
+        int i = 1;
         for (int number : primeNumbers) {
-            System.out.println(number);
+            System.out.println("[" + i + "] - " + number);
+            i++;
         }
     }
 }
