@@ -63,7 +63,9 @@ ArrayList<String> myArrList = new ArrayList<>();
 but __ArrayList__ can only hold objects (but we can wrap it "Integer" instead
 of "int").
 3. Both have index starting at 0 but to get an index :
+```
 for __Array__ : myArr[1];
 for __ArrayList__ : myArr.get(1);
+```
 
 
