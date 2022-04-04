@@ -1,8 +1,7 @@
 # theoryJava
 
-## Variables
 
-## Tricks
+## 1. Tricks
 
 ### Converting String to int
 
@@ -20,7 +19,7 @@ ArrayList<String> myArr = new ArrayList<>(Arrays.asList("a", "b", "c"));
 
 
 
-## Pure theory
+## 2. Pure theory
 
 ### difference between == and .equals()
 
