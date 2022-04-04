@@ -123,15 +123,68 @@ public class myAlgorithm {
         printArray(numbers);
         
         //Start Algo
-        mergeSortAlgo(numbers);
+        mergeSortAlgoRecursively(numbers);
         
         //Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
 
-    private static void mergeSortAlgo(int[] numbers) {
+    private static void mergeSortAlgoRecursively(int[] inputArray) {
+        int inputLength = inputArray.length;
         
+        // If already sorted
+        if (inputLength < 2)
+            return ;
+        
+        int     midIndex = inputLength / 2;
+        int[]   leftHalf = new int[midIndex];
+        int[]   rightHalf = new int[inputLength - midIndex];
+
+        // Fill left half
+        for (int i = 0; i < midIndex; i++)
+            leftHalf[i] = inputArray[i];
+
+        // Fill right half
+        for (int i = midIndex; i < inputLength; i++)
+            rightHalf[i - midIndex] = inputArray[i];
+        
+        // Recursivity
+        mergeSortAlgoRecursively(leftHalf);
+        mergeSortAlgoRecursively(rightHalf);
+
+        // Merge
+        merge(inputArray, leftHalf, rightHalf);
+    }
+
+    private static void merge(int[] inputArray, int[] leftHalf, int[] rightHalf) {
+        int i = 0, j = 0, k = 0;
+        int leftSize = leftHalf.length;
+        int rightSize = rightHalf.length;
+
+        // Merge and refill
+        while (i < leftSize && j < rightSize) {
+            if (leftHalf[i] <= rightHalf[j]) {
+                inputArray[k] = leftHalf[i];
+                i++;
+            } else {
+                inputArray[k] = rightHalf[j];
+                j++;
+            }
+            k++;
+        }
+
+        // Clean up the rest of values
+        while (i < leftSize) {
+            inputArray[k] = leftHalf[i];
+            i++;
+            k++;
+        }
+        while (j < rightSize) {
+            inputArray[k] = rightHalf[j];
+            j++;
+            k++;
+        }
     }
 
 
