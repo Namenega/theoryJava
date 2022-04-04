@@ -23,8 +23,14 @@ public class Main {
         // System.out.println("\n\n");
         
         //testing Bubble Sort algorithm
-        System.out.println(RED + "~~~~~~" + GREEN + " Bubble Sort Algorithm" + RED + "~~~~~~\n" + RESET);
-        algo.bubbleSort();
+        // System.out.println(RED + "~~~~~~" + GREEN + " Bubble Sort Algorithm" + RED + "~~~~~~\n" + RESET);
+        // algo.bubbleSort();
+        // System.out.println("\n\n");
+        
+        
+        //testing Merge Sort algorithm
+        System.out.println(RED + "~~~~~~" + GREEN + " Merge Sort Algorithm" + RED + "~~~~~~\n" + RESET);
+        algo.mergeSort();
         System.out.println("\n\n");
     }
 }

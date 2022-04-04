@@ -45,9 +45,9 @@ public class myAlgorithm {
 
 
     /* ********************************************************************** */
-    /* *************************** PRIME NUMBERS **************************** */
+    /* **************************** BUBBLE SORT ***************************** */
     /* ********************************************************************** */
-
+    
     public void bubbleSort() {
         // Get input from client
         System.out.println("Please input the limit (max 100.000): ");
@@ -59,15 +59,15 @@ public class myAlgorithm {
             System.out.println("Input is bigger than 100.000.\nFixed at 100.000.\n");
             limit = 100000;
         }
-
-        //Get 10 random value
+        
+        //Get random values
         Random rand = new Random();
         int[] numbers = new int[limit];
-
+        
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = rand.nextInt(1000000);
         }
-
+        
         //Print non sorted value
         System.out.println("\nBefore:\n");
         printArray(numbers);
@@ -77,7 +77,7 @@ public class myAlgorithm {
 
         while (swapped) {
             if (swapped)
-                swapped = false;
+            swapped = false;
             for (int i = 0; i < numbers.length - 1; i++) {
                 if (numbers[i] > numbers[i + 1]) {
                     swapped = true;
@@ -87,14 +87,62 @@ public class myAlgorithm {
                 }
             }
         }
-
+        
+        //Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
-    
+
+
+    /* ********************************************************************** */
+    /* ***************************** MERGE SORT ***************************** */
+    /* ********************************************************************** */
+
+    public void mergeSort() {
+        // Get input from client
+        System.out.println("Please input the limit (max 100.000): ");
+        Scanner scan = new Scanner(System.in);
+        int limit = scan.nextInt();
+        scan.close();
+        
+        if (limit > 100000) {
+            System.out.println("Input is bigger than 100.000.\nFixed at 100.000.\n");
+            limit = 100000;
+        }
+                
+        //Get random values
+        Random rand = new Random();
+        int[] numbers = new int[limit];
+                
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = rand.nextInt(1000000);
+        }
+                
+        //Print non sorted value
+        System.out.println("\nBefore:\n");
+        printArray(numbers);
+        
+        //Start Algo
+        mergeSortAlgo(numbers);
+        
+        //Print sorted value
+        System.out.println("\nAfter:\n");
+        printArray(numbers);
+    }
+
+    private static void mergeSortAlgo(int[] numbers) {
+        
+    }
+
+
+    /* ********************************************************************** */
+    /* ******************************* UTILS ******************************** */
+    /* ********************************************************************** */
+
     private static void printArray(int[] numbers) {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
     }
-}
+ }
+    

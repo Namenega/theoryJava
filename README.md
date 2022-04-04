@@ -93,7 +93,7 @@ for ArrayList : myArr.size();
 ## 4. Algorithms
 
 1. Line 13 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
-2. line x : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+2. line 51 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
 
 
 
