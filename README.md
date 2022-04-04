@@ -20,6 +20,18 @@ int i = Integer.parseInt(s);
 ArrayList<String> myArr = new ArrayList<>(Arrays.asList("a", "b", "c"));
 ```
 
+### Sleep()
+```
+try
+{
+    Thread.sleep(1000); // Sleep for one second
+}
+catch (InterruptedException e)
+{
+    Thread.currentThread().interrupt();
+}
+```
+
 
 
 ## 3. Pure theory
@@ -80,7 +92,8 @@ for ArrayList : myArr.size();
 
 ## 4. Algorithms
 
-[Prime Numbers](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+1. Line 13 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+2. line x : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
 
 
 
