@@ -80,7 +80,7 @@ for ArrayList : myArr.size();
 
 ## 4. Algorithms
 
-[Prime Numbers]()
+[Prime Numbers](https://github.com/Namenega/theoryJava/blob/main/algorithm/findPrimeNumbers.java)
 
 
 
