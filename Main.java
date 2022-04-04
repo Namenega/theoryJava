@@ -18,19 +18,28 @@ public class Main {
         myAlgorithm algo = new myAlgorithm();
 
         //testing Prime Numbers algorithm
-        // System.out.println("\n" + RED + "~~~~~~" + GREEN + " Prime Number Algorithm" + RED + "~~~~~~\n" + RESET);
-        // algo.primeNumbers();
-        // System.out.println("\n\n");
+        System.out.println("\n" + RED + "~~~~~~" + GREEN + " Prime Number Algorithm" + RED + "~~~~~~\n" + RESET);
+        algo.primeNumbers();
+        System.out.println("\n\n");
         
         //testing Bubble Sort algorithm
-        // System.out.println(RED + "~~~~~~" + GREEN + " Bubble Sort Algorithm" + RED + "~~~~~~\n" + RESET);
-        // algo.bubbleSort();
-        // System.out.println("\n\n");
-        
+        System.out.println(RED + "~~~~~~" + GREEN + " Bubble Sort Algorithm" + RED + "~~~~~~\n" + RESET);
+        algo.bubbleSort();
+        System.out.println("\n\n");
         
         //testing Merge Sort algorithm
         System.out.println(RED + "~~~~~~" + GREEN + " Merge Sort Algorithm" + RED + "~~~~~~\n" + RESET);
         algo.mergeSort();
+        System.out.println("\n\n");
+
+        //testing Insertion Sort algorithm
+        System.out.println(RED + "~~~~~~" + GREEN + " Insertion Sort Algorithm" + RED + "~~~~~~\n" + RESET);
+        algo.insertionSort();
+        System.out.println("\n\n");
+
+        //testing Quick Sort algorithm
+        System.out.println(RED + "~~~~~~" + GREEN + " Quick Sort Algorithm" + RED + "~~~~~~\n" + RESET);
+        algo.quickSort();
         System.out.println("\n\n");
     }
 }

@@ -13,10 +13,7 @@ public class myAlgorithm {
     
     public void primeNumbers() {
         // Get input from client
-        System.out.println("Please input the limit: ");
-        Scanner scan = new Scanner(System.in);
-        int limit = scan.nextInt();
-        scan.close();
+        int limit = getInput();
         
         //Start Algo
         List<Integer>   primeNumbers = new ArrayList<>();
@@ -45,28 +42,24 @@ public class myAlgorithm {
 
 
     /* ********************************************************************** */
+    /* *************************** PRIME NUMBERS **************************** */
+    /* ********************************************************************** */
+
+    public void fibonacci() {
+
+    }
+
+
+    /* ********************************************************************** */
     /* **************************** BUBBLE SORT ***************************** */
     /* ********************************************************************** */
     
     public void bubbleSort() {
         // Get input from client
-        System.out.println("Please input the limit (max 100.000): ");
-        Scanner scan = new Scanner(System.in);
-        int limit = scan.nextInt();
-        scan.close();
-
-        if (limit > 100000) {
-            System.out.println("Input is bigger than 100.000.\nFixed at 100.000.\n");
-            limit = 100000;
-        }
+        int limit = getInput();
         
         //Get random values
-        Random rand = new Random();
-        int[] numbers = new int[limit];
-        
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(1000000);
-        }
+        int[]   numbers = getRandomValues(limit);
         
         //Print non sorted value
         System.out.println("\nBefore:\n");
@@ -81,9 +74,7 @@ public class myAlgorithm {
             for (int i = 0; i < numbers.length - 1; i++) {
                 if (numbers[i] > numbers[i + 1]) {
                     swapped = true;
-                    int tmp = numbers[i];
-                    numbers[i] = numbers[i + 1];
-                    numbers[i + 1] = tmp;
+                    swap(numbers, i, i + 1);
                 }
             }
         }
@@ -100,23 +91,10 @@ public class myAlgorithm {
 
     public void mergeSort() {
         // Get input from client
-        System.out.println("Please input the limit (max 100.000): ");
-        Scanner scan = new Scanner(System.in);
-        int limit = scan.nextInt();
-        scan.close();
-        
-        if (limit > 100000) {
-            System.out.println("Input is bigger than 100.000.\nFixed at 100.000.\n");
-            limit = 100000;
-        }
+        int limit = getInput();
                 
         //Get random values
-        Random rand = new Random();
-        int[] numbers = new int[limit];
-                
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = rand.nextInt(1000000);
-        }
+        int[]   numbers = getRandomValues(limit);
                 
         //Print non sorted value
         System.out.println("\nBefore:\n");
@@ -189,6 +167,103 @@ public class myAlgorithm {
 
 
     /* ********************************************************************** */
+    /* *************************** INSERTION SORT *************************** */
+    /* ********************************************************************** */
+
+    public void insertionSort() {
+        // Get input from client
+        int limit = getInput();
+                
+        //Get random values
+        int[]   numbers = getRandomValues(limit);
+
+        //Print non sorted value
+        System.out.println("\nBefore:\n");
+        printArray(numbers);
+        
+        //Start Algo
+        insertionSortAlgo(numbers);
+        
+        //Print sorted value
+        System.out.println("\nAfter:\n");
+        printArray(numbers);
+    }
+
+    private static void insertionSortAlgo(int[] inputArray) {
+        for (int i = 1; i < inputArray.length; i++) {
+            int currentValue = inputArray[i];
+            int j = i - 1;
+            while (j >= 0 && inputArray[j] > currentValue) {
+                inputArray[j + 1] = inputArray[j];
+                j--;
+            }
+            inputArray[j + 1] = currentValue;
+        }
+    }
+
+
+    /* ********************************************************************** */
+    /* ***************************** QUICK SORT ***************************** */
+    /* ********************************************************************** */
+
+    public void quickSort() {
+        // Get input from client
+        int limit = getInput();
+                
+        //Get random values
+        int[]   numbers = getRandomValues(limit);
+
+        //Print non sorted value
+        System.out.println("\nBefore:\n");
+        printArray(numbers);
+        
+        //Start Algo
+        quickSortAlgo(numbers);
+        
+        //Print sorted value
+        System.out.println("\nAfter:\n");
+        printArray(numbers);
+    }
+
+    private static void quickSortAlgo(int[] array) {
+        quickSortAlgo(array, 0, array.length - 1);
+    }
+
+    private static void quickSortAlgo(int[] array, int lowIndex, int highIndex) {
+        if (lowIndex >= highIndex)
+            return ;
+        
+        // Get random pivot
+        int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex;
+        int pivot = array[pivotIndex];
+        swap(array, pivotIndex, highIndex);
+
+        // Order and Swap
+        int leftPointer = quickSortAlgo(array, lowIndex, highIndex, pivot);
+
+        // Recursivity
+        quickSortAlgo(array, lowIndex, leftPointer - 1);
+        quickSortAlgo(array, leftPointer + 1, highIndex);
+    }
+
+
+    private static int quickSortAlgo(int[] array, int lowIndex, int highIndex, int pivot) {
+        int leftPointer = lowIndex;
+        int rightPointer = highIndex;
+
+        while (leftPointer < rightPointer) {
+            while (array[leftPointer] <= pivot && leftPointer < rightPointer)
+                leftPointer++;
+            while (array[rightPointer] >= pivot && leftPointer < rightPointer)
+                rightPointer--;
+            swap(array, leftPointer, rightPointer);
+        }
+        swap(array, leftPointer, highIndex);
+        return leftPointer;
+    }
+
+
+    /* ********************************************************************** */
     /* ******************************* UTILS ******************************** */
     /* ********************************************************************** */
 
@@ -196,6 +271,35 @@ public class myAlgorithm {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
+    }
+
+    private static int  getInput() {
+        System.out.println("Please input the limit: ");
+        Scanner scan = new Scanner(System.in);
+        int limit = scan.nextInt();
+        // scan.close();
+
+        if (limit > 100000) {
+            System.out.println("Input is bigger than 100.000.\nFixed at 100.000.\n");
+            limit = 100000;
+        }
+        return (limit);
+    }
+
+    private static int[]    getRandomValues(int limit) {
+        Random rand = new Random();
+        int[] numbers = new int[limit];
+                
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] = rand.nextInt(1000000);
+        }
+        return (numbers);
+    }
+
+    private static void swap(int[] array, int index1, int index2) {
+        int tmp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = tmp;
     }
  }
     
