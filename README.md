@@ -95,7 +95,9 @@ for ArrayList : myArr.size();
 1. Line 13 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
 2. line 51 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
 3. line 101 : [Merge Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
-4. line 101 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+4. line 173 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+5. line 209 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
+6. line 270 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/main/algorithm/myAlgorithm.java)
 
 
 
