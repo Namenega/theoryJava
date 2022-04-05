@@ -162,7 +162,7 @@ for ArrayList : myArr.size();
 ### Polymorphism
 
 Subclasses have access to protected and public methods of the parent class.
-Polymorphism makes that the subclasses can __override__ a parent's method :
+Polymorphism makes that the subclasses can ***override*** a parent's method :
 ```
 Parent class "Animal":
 
@@ -181,17 +181,43 @@ public void noise() {
 dog.noise() after override : "OUAF OUAF"
 ```
 
-Another part of the concept is that we can __overload__ methods :
+Another part of the concept is that we can ***overload*** methods :
 ```
 public void noise() {...};
-public void noise(int numberOfTime) {...};
+public void noise(int numberOfTimes) {...};
 public void noise(String typeOfFood) {...};
 public void noise(int numberOfTime, String typeOfFood) {...};
 ```
-We can create/overload the same function many times if parameters or the type
-of the function change.
+We can create/overload the same function (same name) many times if parameters or
+the type of the function change.
 
+### File Input/Output
+```
+import java.io.BufferWriter;
+import java.io.FileWriter;
 
+try {
+    //Write to a File
+	BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+	writer.write("Hello from outside!");
+	writer.close();
+
+    //Read from a file
+	BufferedReader reader = new BufferedReader(new FileReader("output.txt"));
+	reader.readLine();
+	reader.close();
+} catch (IOException e) {
+	e.printStackTrace();
+}
+```
+
+1. ***BufferedWriter*** is a subclass of Writer. It is used to simplify text writing in
+a character output stream.
+2. ***FileWriter*** is a subclass of OutputStreamWriter. It is used to write text files.
+
+3. ***BufferedReader*** is a subclass of Reader. It is used to simplify text reading from
+a character input stream.
+4. ***FileReader*** is a subclass of InputStreamReader. It is used to read text files.
 
 
 

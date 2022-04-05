@@ -1,6 +1,7 @@
 package theoryJava;
 
 import theoryJava.algorithm.myAlgorithm;
+import theoryJava.fileManagement.*;
 
 
 
@@ -15,8 +16,10 @@ public class Main {
     public static final String PURPLE = "\u001B[35m";
     public static final String CYAN = "\u001B[36m";
     public static void  main(String[] args) {
-        myAlgorithm algo = new myAlgorithm();
+        // myAlgorithm algo = new myAlgorithm();
+        ManageFile text = new ManageFile();
 
+        /* **************************** ALGORITHM *************************** */
         //testing Prime Numbers algorithm
         // System.out.println("\n" + RED + "~~~~~~" + GREEN + " Prime Number Algorithm" + RED + "~~~~~~\n" + RESET);
         // algo.primeNumbers();
@@ -43,8 +46,16 @@ public class Main {
         // System.out.println("\n\n");
 
         //testing Fibonacci algorithm
-        System.out.println(RED + "~~~~~~" + GREEN + " Fibonacci Algorithm " + RED + "~~~~~~\n" + RESET);
-        algo.fibonacci();
+        // System.out.println(RED + "~~~~~~" + GREEN + " Fibonacci Algorithm " + RED + "~~~~~~\n" + RESET);
+        // algo.fibonacci();
+        // System.out.println("\n\n");
+
+        /* ************************ FILE MANAGEMENT ************************* */
+        //testing to write in a file
+        System.out.println(RED + "~~~~~~" + GREEN + " Write to a file " + RED + "~~~~~~\n" + RESET);
+        text.writeToFile();
+        System.out.println(RED + "~~~~~~" + GREEN + " Read from a file " + RED + "~~~~~~\n" + RESET);
+        text.readFromFile();
         System.out.println("\n\n");
     }
 }
