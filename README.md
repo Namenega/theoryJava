@@ -2,16 +2,74 @@
 
 ## 1. Primitive Data Type Variables
 
+1. __byte__ :
+```
+size    : 8 bits / 1 byte
+range   : [-128:127]
+hold    : whole number (or character)
+example : 12
+```
+2. __short__ :
+```
+size    : 16 bits / 2 bytes
+range   : [-32768:32767]
+hold    : whole number
+example : 1200
+```
+3. __int__ :
+```
+size    : 32 bits / 4 bytes
+range   : [-2147483648:2147483647]
+hold    : whole number
+example : 1200000
+```
+4. __long__ :
+```
+size    : 64 bits / 8 bytes
+range   : [-9223372036854775808:9223372036854775807]
+hold    : whole number
+example : 12000000000
+```
+5. __float__ :
+```
+size    : 32 bits / 4 bytes
+range   : [6 decimal digits]
+hold    : decimal number
+example : 12.64f
+```
+6. __double__ :
+```
+size    : 64 bits / 8 bytes
+range   : [15 decimal digits]
+hold    : decimal number
+example : 12.64
+```
+7. __boolean__ :
+```
+size    : 1 bit
+range   : [true:false]
+hold    : true or false
+example : true, false, (x > 20)
+```
+8. __char__ :
+```
+size    : 16 bits / 2 bytes
+range   : /
+hold    : single character / ASCII value
+example : true, false, (x > 20)
+```
+
 
 
 ## 2. Tricks
 
-### Converting String to int
+### Converting String to int/float
 
 ```
 String s = "5";
 
 int i = Integer.parseInt(s);
+float j = Integer.parseFloat(s);
 ```
 
 ### Filling ArrayList at declaration
@@ -37,6 +95,12 @@ catch (InterruptedException e)
 import java.util.Scanner
 
 Scanner x = new Scanner(System.in);
+
+String  name = x.nextLine();
+int     age = x.nextInt();
+...
+...
+x.close();
 ```
 
 
