@@ -161,8 +161,8 @@ for ArrayList : myArr.size();
 
 ### Polymorphism
 
-Subclasses have access to protected and public method of the parent class.
-Polymorphism makes that the subclasses can override a parent's method.
+Subclasses have access to protected and public methods of the parent class.
+Polymorphism makes that the subclasses can __override__ a parent's method :
 ```
 Parent class "Animal":
 
@@ -180,6 +180,17 @@ public void noise() {
 
 dog.noise() after override : "OUAF OUAF"
 ```
+
+Another part of the concept is that we can __overload__ methods :
+```
+public void noise() {...};
+public void noise(int numberOfTime) {...};
+public void noise(String typeOfFood) {...};
+public void noise(int numberOfTime, String typeOfFood) {...};
+```
+We can create/overload the same function many times if parameters or the type
+of the function change.
+
 
 
 
