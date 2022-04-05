@@ -159,6 +159,29 @@ for Array : myArr.length;
 for ArrayList : myArr.size();
 ```
 
+### Polymorphism
+
+Subclasses have access to protected and public method of the parent class.
+Polymorphism makes that the subclasses can override a parent's method.
+```
+Parent class "Animal":
+
+public void noise() {
+    System.out.println("NOISE NOISE");
+}
+
+Sub class "Dog":
+
+dog.noise() before override : "NOISE NOISE"
+
+public void noise() {
+    System.out.println("OUAF OUAF");
+}
+
+dog.noise() after override : "OUAF OUAF"
+```
+
+
 
 
 ## 4. Algorithms
