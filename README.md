@@ -47,7 +47,7 @@ example : 12.64
 7. __boolean__ :
 ```
 size    : 1 bit
-range   : [true:false]
+range   : /
 hold    : true or false
 example : true, false, (x > 20)
 ```
@@ -56,7 +56,7 @@ example : true, false, (x > 20)
 size    : 16 bits / 2 bytes
 range   : /
 hold    : single character / ASCII value
-example : true, false, (x > 20)
+example : 'a', '4', ' '
 ```
 
 
@@ -163,12 +163,13 @@ for ArrayList : myArr.size();
 
 ## 4. Algorithms
 
-1. Line 13 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L10)
-2. line 51 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L53)
-3. line 101 : [Merge Sort](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L88)
-4. line 173 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L169)
-5. line 209 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L205)
-6. line 270 : [Utils](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L266)
+1. Line 10 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L10)
+1. Line 44 : [Fibonaccis](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L44)
+2. line 77 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L77)
+3. line 112 : [Merge Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L112)
+4. line 193 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L193)
+5. line 229 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L229)
+6. line 289 : [Utils](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L289)
 
 
 
