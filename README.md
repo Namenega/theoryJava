@@ -165,11 +165,11 @@ for ArrayList : myArr.size();
 
 1. Line 10 : [Prime Numbers](https://github.com/Namenega/theoryJava/blob/1fe9b42a04cdecc2ea862f620627b59d021edb41/algorithm/myAlgorithm.java#L10)
 1. Line 44 : [Fibonaccis](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L44)
-2. line 77 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L77)
-3. line 112 : [Merge Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L112)
-4. line 193 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L193)
-5. line 229 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L229)
-6. line 289 : [Utils](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L289)
+2. Line 77 : [Bubble Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L77)
+3. Line 112 : [Merge Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L112)
+4. Line 193 : [Insertion Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L193)
+5. Line 229 : [Quick Sort](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L229)
+6. Line 289 : [Utils](https://github.com/Namenega/theoryJava/blob/4d49dcf17568872cc506345921a399ead5baa4ac/algorithm/myAlgorithm.java#L289)
 
 
 
