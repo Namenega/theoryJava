@@ -32,6 +32,13 @@ catch (InterruptedException e)
 }
 ```
 
+### Get Input from users
+```
+import java.util.Scanner
+
+Scanner x = new Scanner(System.in);
+```
+
 
 
 ## 3. Pure theory

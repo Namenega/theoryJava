@@ -10,16 +10,16 @@ public class myAlgorithm {
     /* ********************************************************************** */
     /* *************************** PRIME NUMBERS **************************** */
     /* ********************************************************************** */
-    
+
     public void primeNumbers() {
         // Get input from client
         int limit = getInput();
-        
-        //Start Algo
-        List<Integer>   primeNumbers = new ArrayList<>();
+
+        // Start Algo
+        List<Integer> primeNumbers = new ArrayList<>();
         int numberToCheck = 2;
         int count = 0;
-        
+
         System.out.println("\nThe first " + limit + " prime numbers are:");
         while (true) {
             boolean isPrime = true;
@@ -34,7 +34,7 @@ public class myAlgorithm {
                 count++;
                 System.out.println("[" + count + "] - " + numberToCheck);
                 if (count >= limit)
-                break;
+                    break;
             }
             numberToCheck++;
         }
@@ -42,35 +42,59 @@ public class myAlgorithm {
 
 
     /* ********************************************************************** */
-    /* *************************** PRIME NUMBERS **************************** */
+    /* ***************************** FIBONACCI ****************************** */
     /* ********************************************************************** */
 
-    public void fibonacci() {
+    private static long[]   fibonacciCache;
 
+    public void fibonacci() {
+        // Get input from client
+        int limit = getInput();
+
+        fibonacciCache = new long[limit + 1];
+
+        // Start Algo
+        for (int i = 0; i <= limit; i++) {
+            if (fibonacciAlgo(i) > 2147483647 || fibonacciAlgo(i) < -2147483648)
+                System.out.println("Out of 'long' type range.");
+            else
+                System.out.println("Result: " + fibonacciAlgo(i));
+        }
+
+    }
+
+    private static long fibonacciAlgo(int n) {
+        if (n <= 1)
+            return (n);
+        if (fibonacciCache[n] != 0)
+            return (fibonacciCache[n]);
+        long fibonacciNumber = fibonacciAlgo(n - 1) + fibonacciAlgo(n - 2);
+        fibonacciCache[n] = fibonacciNumber;
+        return (fibonacciNumber);
     }
 
 
     /* ********************************************************************** */
     /* **************************** BUBBLE SORT ***************************** */
     /* ********************************************************************** */
-    
+
     public void bubbleSort() {
         // Get input from client
         int limit = getInput();
-        
-        //Get random values
-        int[]   numbers = getRandomValues(limit);
-        
-        //Print non sorted value
+
+        // Get random values
+        int[] numbers = getRandomValues(limit);
+
+        // Print non sorted value
         System.out.println("\nBefore:\n");
         printArray(numbers);
-        
-        //Start Algo
+
+        // Start Algo
         boolean swapped = true;
 
         while (swapped) {
             if (swapped)
-            swapped = false;
+                swapped = false;
             for (int i = 0; i < numbers.length - 1; i++) {
                 if (numbers[i] > numbers[i + 1]) {
                     swapped = true;
@@ -78,8 +102,8 @@ public class myAlgorithm {
                 }
             }
         }
-        
-        //Print sorted value
+
+        // Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
@@ -92,32 +116,32 @@ public class myAlgorithm {
     public void mergeSort() {
         // Get input from client
         int limit = getInput();
-                
-        //Get random values
-        int[]   numbers = getRandomValues(limit);
-                
-        //Print non sorted value
+
+        // Get random values
+        int[] numbers = getRandomValues(limit);
+
+        // Print non sorted value
         System.out.println("\nBefore:\n");
         printArray(numbers);
-        
-        //Start Algo
+
+        // Start Algo
         mergeSortAlgoRecursively(numbers);
-        
-        //Print sorted value
+
+        // Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
 
     private static void mergeSortAlgoRecursively(int[] inputArray) {
         int inputLength = inputArray.length;
-        
+
         // If already sorted
         if (inputLength < 2)
-            return ;
-        
-        int     midIndex = inputLength / 2;
-        int[]   leftHalf = new int[midIndex];
-        int[]   rightHalf = new int[inputLength - midIndex];
+            return;
+
+        int midIndex = inputLength / 2;
+        int[] leftHalf = new int[midIndex];
+        int[] rightHalf = new int[inputLength - midIndex];
 
         // Fill left half
         for (int i = 0; i < midIndex; i++)
@@ -126,7 +150,7 @@ public class myAlgorithm {
         // Fill right half
         for (int i = midIndex; i < inputLength; i++)
             rightHalf[i - midIndex] = inputArray[i];
-        
+
         // Recursivity
         mergeSortAlgoRecursively(leftHalf);
         mergeSortAlgoRecursively(rightHalf);
@@ -173,18 +197,18 @@ public class myAlgorithm {
     public void insertionSort() {
         // Get input from client
         int limit = getInput();
-                
-        //Get random values
-        int[]   numbers = getRandomValues(limit);
 
-        //Print non sorted value
+        // Get random values
+        int[] numbers = getRandomValues(limit);
+
+        // Print non sorted value
         System.out.println("\nBefore:\n");
         printArray(numbers);
-        
-        //Start Algo
+
+        // Start Algo
         insertionSortAlgo(numbers);
-        
-        //Print sorted value
+
+        // Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
@@ -209,18 +233,18 @@ public class myAlgorithm {
     public void quickSort() {
         // Get input from client
         int limit = getInput();
-                
-        //Get random values
-        int[]   numbers = getRandomValues(limit);
 
-        //Print non sorted value
+        // Get random values
+        int[] numbers = getRandomValues(limit);
+
+        // Print non sorted value
         System.out.println("\nBefore:\n");
         printArray(numbers);
-        
-        //Start Algo
+
+        // Start Algo
         quickSortAlgo(numbers);
-        
-        //Print sorted value
+
+        // Print sorted value
         System.out.println("\nAfter:\n");
         printArray(numbers);
     }
@@ -231,8 +255,8 @@ public class myAlgorithm {
 
     private static void quickSortAlgo(int[] array, int lowIndex, int highIndex) {
         if (lowIndex >= highIndex)
-            return ;
-        
+            return;
+
         // Get random pivot
         int pivotIndex = new Random().nextInt(highIndex - lowIndex) + lowIndex;
         int pivot = array[pivotIndex];
@@ -245,7 +269,6 @@ public class myAlgorithm {
         quickSortAlgo(array, lowIndex, leftPointer - 1);
         quickSortAlgo(array, leftPointer + 1, highIndex);
     }
-
 
     private static int quickSortAlgo(int[] array, int lowIndex, int highIndex, int pivot) {
         int leftPointer = lowIndex;
@@ -273,7 +296,7 @@ public class myAlgorithm {
         }
     }
 
-    private static int  getInput() {
+    private static int getInput() {
         System.out.println("Please input the limit: ");
         Scanner scan = new Scanner(System.in);
         int limit = scan.nextInt();
@@ -286,10 +309,10 @@ public class myAlgorithm {
         return (limit);
     }
 
-    private static int[]    getRandomValues(int limit) {
+    private static int[] getRandomValues(int limit) {
         Random rand = new Random();
         int[] numbers = new int[limit];
-                
+
         for (int i = 0; i < numbers.length; i++) {
             numbers[i] = rand.nextInt(1000000);
         }
@@ -301,5 +324,4 @@ public class myAlgorithm {
         array[index1] = array[index2];
         array[index2] = tmp;
     }
- }
-    
+}
