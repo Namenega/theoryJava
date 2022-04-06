@@ -63,7 +63,7 @@ example : 'a', '4', ' '
 
 ## 2. Concepts
 
-### Polymorphism
+### 2.1 Polymorphism
 
 Subclasses have access to protected and public methods of the parent class.
 Polymorphism makes that the subclasses can ***override*** a parent's method :
@@ -95,7 +95,7 @@ public void noise(int numberOfTime, String typeOfFood) {...};
 We can create/overload the same function (same name) many times if parameters or
 the type of the function change.
 
-### Inner Class (Nested class)
+### 2.2 Inner Class (Nested class)
 ```
 public class MyClass {
 	...
@@ -137,7 +137,7 @@ MyClass.MyInnerClass y = new MyClass.MyInnerClass();
 
 ## 3. Object vs Object
 
-### Array vs ArrayList
+### 3.1 Array vs ArrayList
 Ex:
 ```
 import java.util.ArrayList;
@@ -161,7 +161,7 @@ Array : myArr.length;
 ArrayList : myArr.size();
 ```
 
-### LinkedList vs ArrayList
+### 3.2 LinkedList vs ArrayList
 Ex:
 ```
 import java.util.ArrayList;
@@ -180,7 +180,7 @@ and _previous_ pointer, while AL needs to recreate the whole array.
 
 ## 4. Tricks
 
-### Converting String to int/float
+### 4.1 Converting String to int/float
 
 ```
 String s = "5";
@@ -189,13 +189,13 @@ int i = Integer.parseInt(s);
 float j = Integer.parseFloat(s);
 ```
 
-### Filling ArrayList at declaration
+### 4.2 Filling ArrayList at declaration
 
 ```
 ArrayList<String> myArr = new ArrayList<>(Arrays.asList("a", "b", "c"));
 ```
 
-### Sleep()
+### 4.3 Sleep()
 ```
 try
 {
@@ -207,7 +207,7 @@ catch (InterruptedException e)
 }
 ```
 
-### Get Input from users
+### 4.4 Get Input from users
 ```
 import java.util.Scanner
 
@@ -224,7 +224,7 @@ x.close();
 
 ## 5. Pure theory
 
-### difference between == and .equals()
+### 5.1 Difference between == and .equals()
 
 > What happens with __==__ ?
 
@@ -251,7 +251,7 @@ public boolean equals(TheObject obj_name) {
 }
 ```
 
-### File Input/Output
+### 5.2 File Input/Output
 ```
 import java.io.BufferWriter;
 import java.io.FileWriter;
@@ -279,7 +279,7 @@ a character output stream.
 a character input stream.
 4. ***FileReader*** is a subclass of InputStreamReader. It is used to read text files.
 
-### Final keyword
+### 5.3 Final keyword
 
 1. ***final*** used on a class prevents other class from being subclass of this one.
 ```
