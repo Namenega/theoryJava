@@ -150,14 +150,30 @@ but __ArrayList__ can only hold objects (but we can wrap it "Integer" instead
 of "int").
 3. Both have index starting at 0 but to get an index:
 ```
-for Array : myArr[1];
-for ArrayList : myArr.get(1);
+Array : myArr[1];
+ArrayList : myArr.get(1);
 ```
 4. Same for the size (Array applies a field while ArrayList applies a method):
 ```
-for Array : myArr.length;
-for ArrayList : myArr.size();
+Array : myArr.length;
+ArrayList : myArr.size();
 ```
+
+### LinkedList vs ArrayList
+Ex:
+```
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+LinkedList<String>	myLinkList = new LinkedList<>();
+ArrayList<String>	myArrayList = new ArrayList<>();
+```
+1. __ArrayList__ has a reference on every index in the array, making it faster than __LinkedList__
+to go to a particular index. LL begins at index[0] and increments to the index while
+AL goes straight to the reference!
+2. To add a value in the middle of the list, LL does it better by changing the _next_
+and _previous_ pointer, while AL needs to recreate the whole array.
+
 
 ### Polymorphism
 
@@ -218,6 +234,24 @@ a character output stream.
 3. ***BufferedReader*** is a subclass of Reader. It is used to simplify text reading from
 a character input stream.
 4. ***FileReader*** is a subclass of InputStreamReader. It is used to read text files.
+
+### Final keyword
+
+1. ***final*** used on a class prevents other class from being subclass of this one.
+```
+public final class MyClass {}
+```
+2. ***final*** used on a method in a parent class results in that method is not
+overridable in its subclasses. It will be this method for every subclasses.
+```
+public final void myMethod() {}
+```
+3. ***final*** used on a variable results in the fact that this variable can only be
+assigned once.
+```
+final int number = 10;
+```
+
 
 
 
